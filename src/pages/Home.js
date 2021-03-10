@@ -1,7 +1,15 @@
 import React from "react";
-
-const Home = () => {
-  return <div>shey u wanted to be mad before</div>;
-};
-
-export default Home;
+import Hero from "../components/Hero";
+import Banner from "../components/Banner";
+import { Link } from "react-router-dom";
+export default function Home() {
+  return (
+    <Hero>
+      <Banner title="luxurious rooms" subtitle="deluxe rooms starting at $299">
+        <Link to="/rooms" className="btn-primary">
+          Our Rooms
+        </Link>
+      </Banner>
+    </Hero>
+  );
+}
